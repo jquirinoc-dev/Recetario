@@ -71,5 +71,44 @@ export const recipeesFile = [
         \n8. Servimos y disfrutamos!
         \n\n\nNOTA: ES IMPORTANTE QUE LA PASTA SE AGREGUE A LA SALSA Y NO AL REVES, DE LO CONTRARIO LA PASTA SE PEGARA Y NO TENDRA LA TEXTURA CORRECTA.
         `
+    },
+    { 
+        id: 4,
+        title: 'Poke sencillo',
+        image: './src/assets/poke.jpeg',
+        desc: `Ingredientes:
+        \n200gr proteina a la eleccion (Sirloin, pollo, camarones, etc)
+        Sal y pimienta al gusto
+        1 taza de arroz
+        1/2 taza de salsa de soya
+        Miel de abeja
+        Salsa siracha
+        \n\nPreparacion:
+        \n1. En una olla o sartén, agregar el arroz y cubrir con 2 y 1/8 taza de agua. Dejar cocinar a fuego medio hasta que el agua se evapore y el arroz quede cocido.
+        \n2. Para la carne, cortarla en tiras finas y sazonar con sal y pimienta al gusto.
+        \n3. En una sartén, agregar un poco de aceite de oliva y cocinar la carne hasta que esté dorada.
+        \n4. Para la salsa, mezclar la salsa de soya, miel de abeja y siracha en un recipiente y revolver hasta que se integren.
+        \n5. Agregar la salsa a la carne y revolver hasta que se integren.
+        \n6. Una vez que el arroz esté cocido, agregarlo a la carne y revolver hasta que se integren.
+        \n7. Al servir, puede acompañarse con aguacate, mayonesa, pepino, siracha, etc.
+        \n8. Disfrutamos!
+        `
+    },
+    { 
+        id: 5,
+        title: 'Huevos en su nido',
+        image: 'https://cdn0.recetasgratis.net/es/posts/8/3/9/huevos_al_nido_con_leche_6938_600.webp',
+        desc: `Ingredientes:
+        \nHuevos
+        Pan de barra
+        Sal y pimienta al gusto
+        Mantequilla
+        \n\nPreparacion:
+        \n1. En un sartén, agregar un poco de mantequilla y calentar a fuego medio.
+        \n2. Corta un hueco en la cantidad de rebanadas de pan que quieras comer.
+        \n3. Una vez el sartén esté caliente, agregar las rebanadas de pan y cocinar hasta que estén doradas.
+        \n4. Una vez que el pan esté dorado, agregar los huevos en el hueco previamente cortado y cocinar hasta que estén a tu gusto.
+        \n5. Sazonar con sal y pimienta al gusto.
+        `
     }
   ];
