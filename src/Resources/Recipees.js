@@ -75,7 +75,7 @@ export const recipeesFile = [
     { 
         id: 4,
         title: 'Poke sencillo',
-        image: './src/assets/poke.jpeg',
+        image: '../../src/assets/poke.jpeg',
         desc: `Ingredientes:
         \n200gr proteina a la eleccion (Sirloin, pollo, camarones, etc)
         Sal y pimienta al gusto
