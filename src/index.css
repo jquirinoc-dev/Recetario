@@ -1,16 +1,9 @@
 :root {
+    --pink-highlight: #fc9aab;
+    --main-pink-background-color: #fad3e9;
+    --popup-background-color: #f7b0d7;
     --white: #FFFFFF;
-    --main-softbrot-green: #637247;
     --product-showcase-background: #F0F0F0;
-    --product-font-color: #1D1D1B;
-    --solutions-showcase-background: #FEF4E7;
-    --contact-page-background: #1D1D1B;
-    --about-us-page-background: var(--main-softbrot-green);
-    --contact-form-outline: #4F8358;
-    --contact-fields-placeholder: #696969;
-    --contact-page-alter-background: #F0F0F0;
-    --form-success-background: #44B157;
-    --form-error-background: #C63926;
 }
 
 * {
@@ -25,7 +18,7 @@ html {
 
 body {
     font-family: Poppins;
-    background-color: var(--solutions-showcase-background);
+    background-color: var(--main-pink-background-color);
 }
 
 @font-face {
@@ -84,12 +77,12 @@ body::-webkit-scrollbar{
     padding: 0 0.5rem;
     border-radius: 0.5rem;
     color : #fff;
-    background-color: var(--main-softbrot-green);
+    background-color: var(--pink-highlight);
     font-family: Poppins;
 }
 
 .topbar .topbar_search input::placeholder {
-    color: #b8b8b8;
+    color: #e6e6e6;
 }
 
 .topbar .topbar_search input:focus::placeholder {
@@ -182,7 +175,7 @@ body::-webkit-scrollbar{
     height: 90%;
     padding: 1.5rem;
     color: var(--white);
-    background-color: var(--contact-form-outline);
+    background-color: var(--popup-background-color);
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -238,7 +231,7 @@ body::-webkit-scrollbar{
 }
 
 .recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_desc::-webkit-scrollbar-thumb:hover{
-    background: #c4c4c4;
+    background: var(--pink-highlight);
 }
 
 
@@ -252,6 +245,47 @@ body::-webkit-scrollbar{
 
 .recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_close:hover {
     cursor: pointer;
+}
+
+.nothing-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 85%;
+    height: 400px;
+    background-color: var(--white);
+    padding: 2rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.nothing-found h1 {
+    margin: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.nothing-found p {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.nothing-found svg {
+    margin: 1.5rem;
+    animation: spin 3s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 @media screen and (max-width: 800px){
@@ -303,6 +337,20 @@ body::-webkit-scrollbar{
         font-size: 1.2rem;
         text-align: center;
         cursor: pointer;
+    }
+
+    .nothing-found {
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+    }
+
+    .nothing-found h1 {
+        font-size: 1.5rem;
+    }
+
+    .nothing-found p {
+        font-size: 1rem;
     }
 }
 
