@@ -9,6 +9,7 @@ export const Recipees = ( { recipees } ) => {
             key={recipe.id}
             title={recipe.title}
             image={recipe.image}
+            desc={recipe.desc}
             />
         ))}
     </div>

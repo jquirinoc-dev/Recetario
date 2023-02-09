@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import logo from './assets/softbrot.png'
+import { handleMoveTop } from './Resources/HandleMoveTop'
 
 export const TopBar = ( {onSearch} ) => {
 
@@ -11,10 +12,11 @@ export const TopBar = ( {onSearch} ) => {
     }
 
 
+
   return (
     <div className="topbar">
         <div className="topbar_logo">
-            <img src= {logo} alt="By Softbrot" />
+            <img src= {logo} alt="By Softbrot" onClick={handleMoveTop}/>
         </div>
         <div className="topbar_search">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#474747" class="bi bi-search" viewBox="0 0 16 16">

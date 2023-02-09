@@ -4,9 +4,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 .topbar {
@@ -63,9 +71,177 @@ body {
 }
 
 .recipees-container {
-    width: 100%;
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
-    padding: 0 15px;
-    margin-top: 10rem;
+    padding: 0 1rem;
+    margin-top: 8rem;
+}
+
+.recipees-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipees-container .recipe{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 450px;
+    margin: 1rem;
+    background-color: #e7e6e6;
+    text-align: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.recipe .recipe_title {
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+.recipe .recipe_desc {
+    white-space: pre-line;
+}
+
+.recipe .recipe_image {
+    width: 100%;
+}
+
+.recipe .recipe_image img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+}
+
+.recipe_detail_popup {
+    display: none;
+}
+
+.recipe_detail_popup.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-in-out;
+    overflow: auto;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.recipe_detail_popup .recipe_detail_popup_inner {
+    width: 80%;
+    height: 90%;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_image {
+    aspect-ratio: 4/3;
+    width: 400px;
+}
+
+.recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_image img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+}
+
+.recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_desc{
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    white-space: pre-line;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_desc::-webkit-scrollbar{
+  /* Style the scrollbar */
+    width: 10px;
+
+}
+
+.recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_desc::-webkit-scrollbar-track{
+  /* Style the scrollbar */
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_desc::-webkit-scrollbar-thumb{
+  /* Style the scrollbar */
+    background: #888;
+    border-radius: 10px;
+}
+
+.recipe_detail_popup  .recipe_detail_popup_close {
+    position: absolute;
+    top: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_close:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px){
+
+    .topbar {
+        padding: 0 10px;
+    }
+
+    .topbar .topbar_search {
+        margin-right: 0;
+    }
+
+    .recipees-container {
+        width: 100%;
+    }
+
+    .recipees-container .recipe{
+        width: 100%;
+    }
+
+    .recipees-container .recipe{
+        width: 100%;
+    }
+    .recipe_detail_popup .recipe_detail_popup_inner {
+        width: 95%;
+        padding: 1.5rem;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_image {
+        aspect-ratio: 4/3;
+        width: 100%;
+    }
+    .recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_image img {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 4/3;
+    }
 }
