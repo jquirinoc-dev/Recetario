@@ -52,6 +52,7 @@ body::-webkit-scrollbar{
 .topbar .topbar_logo {
     width: 3rem;
     margin: 0.5rem 0;
+    cursor: pointer;
 }
 
 .topbar .topbar_logo img {
@@ -230,9 +231,12 @@ body::-webkit-scrollbar{
     border-radius: 1rem;
 }
 
+.recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_desc::-webkit-scrollbar-thumb:hover{
+    background: #c4c4c4;
+}
+
 
 .recipe_detail_popup_close {
-    /* fix the button inside the detail popup inner container */
     display: flex;
     position: absolute;
     top: 5.5%;
