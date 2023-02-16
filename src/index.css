@@ -318,7 +318,7 @@ body::-webkit-scrollbar{
     }
     .recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_image {
         aspect-ratio: 4/3;
-        width: 100%;
+        width: 90%;
     }
     .recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_image img {
         width: 100%;
@@ -337,9 +337,10 @@ body::-webkit-scrollbar{
 
     .recipe_detail_popup .recipe_detail_popup_inner .recipe_detail_popup_title {
         color: #fff;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-align: center;
         cursor: pointer;
+        margin: 0;
     }
 
     .nothing-found {
